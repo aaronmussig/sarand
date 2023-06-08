@@ -241,6 +241,10 @@ def run_RGI(
     # remove any potential * from the sequence
     delete_a_string_from_file("*", input_file)
     arg_list = [
+        "conda",
+        "run",
+        "-n",
+        "rgi-5.2.0",
         "rgi",
         "main",
         "--input_sequence",
@@ -322,7 +326,10 @@ def annotate_sequence(
     )
     prefix_name = "neighbourhood_" + seq_description
     arg_list = [
-        "prokka",
+        "conda",
+        "run",
+        "-n",
+        "prokka-1.14.6",
         "--metagenome",
         "--outdir",
         prokka_dir,
