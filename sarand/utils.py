@@ -330,6 +330,7 @@ def annotate_sequence(
         "run",
         "-n",
         "prokka-1.14.6",
+        'prokka',
         "--metagenome",
         "--outdir",
         prokka_dir,
