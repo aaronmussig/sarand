@@ -1437,7 +1437,11 @@ def find_amr_related_nodes(
             os.remove(output_name + ".tsv")
         bandage_command = subprocess.run(
             [
-				bandage_path,
+                "conda",
+                "run",
+                "-n",
+				"bandage-0.8.1",
+                "Bandage",
                 "querypaths",
                 gfa_file,
                 amr_file,

@@ -751,7 +751,11 @@ def are_there_amrs_in_graph(gfa_file, output_dir, bandage_path, threshold, amr_o
         os.remove(output_name + ".tsv")
     bandage_command = subprocess.run(
         [
-            bandage_path,
+            "conda",
+            "run",
+            "-n",
+            "bandage-0.8.1",
+            "Bandage",
             "querypaths",
             gfa_file,
             cat_file,
